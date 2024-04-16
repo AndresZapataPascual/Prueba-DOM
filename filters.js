@@ -7,8 +7,8 @@ filtroNoCompletadas.addEventListener('change', filtrarTareas);
 
 export function filtrarTareas() {
     const tareas = listaTareas.querySelectorAll('.tarea');
-    const mostrarCompletadas = filtroCompletadas.checked;
-    const mostrarNoCompletadas = filtroNoCompletadas.checked;
+    const mostrarCompletadas = filtroCompletadas.cheked;
+    const mostrarNoCompletadas = filtroNoCompletadas.cheked;
 
     tareas.forEach(tarea => {
         const completada = tarea.classList.contains('completada');
