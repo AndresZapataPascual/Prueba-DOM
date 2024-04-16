@@ -13,10 +13,17 @@
     </header>
     <main class="container">
         <section class="add">
-            <section class="añadir">
-                <h2>Agregar Tarea</h2>
-                <input type="text" id="ing-tarea" placeholder="Ingrese una nueva tarea">
-                <button id="add-tarea">Agregar Tarea</button>
+            <section class="division">
+                <section class="añadir">
+                    <h2>Agregar Tarea</h2>
+                    <input type="text" id="ing-tarea" placeholder="Ingrese una nueva tarea">
+                    <button id="add-tarea">Agregar Tarea</button>
+                </section>
+
+                <section class="notas">
+                    <h2>Notas</h2>
+                    <input type="text" id="ing-notas" placeholder="Ingrese notas para la tarea seleccionada">
+                </section>
             </section>
 
             <section class="filtros">
@@ -30,19 +37,25 @@
             </section>
         </section>
 
-        <section class="lista">
-            <h2>Lista de Tareas</h2>
-            <ul id="lista-tareas">
-                <!-- Aquí se mostrarán las tareas -->
-            </ul>
-            <div id="contenedor-notas" style="display: none;"></div>
+        <section class="visual">
+            <section class="lista">
+                <h2>Lista de Tareas</h2>
+                <ul id="lista-tareas">
+                    <!-- Aquí se mostrarán las tareas -->
+                </ul>
+                <div id="contenedor-notas" style="display: none;"></div>
+            </section>
+
+            <section class="notas1">
+                <h2>Notas</h2>
+                <ul>
+                    <!-- Aquí se agregarán dinámicamente las notas como elementos <li> -->
+                </ul>
+            </section>
         </section>
     </main>
 
-    <section class="notas">
-        <h2>Notas</h2>
-        <input type="text" id="ing-notas" placeholder="Ingrese notas para la tarea seleccionada">
-    </section>
+    
     <script type="module" src="app.js"></script>
 </body>
 </html>

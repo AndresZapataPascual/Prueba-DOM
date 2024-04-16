@@ -1,4 +1,3 @@
-// JavaScript (nuevoArchivo.js)
 // Obtener el input de notas, el contenedor de notas y la lista de tareas
 const inputNotas = document.getElementById('ing-notas');
 const contenedorNotas = document.getElementById('contenedor-notas');
@@ -15,12 +14,20 @@ export function agregarNotas() {
 
         // Agregar las nuevas notas al contenedor de notas al lado de la tarea seleccionada
         if (notas !== '') {
-            const notasElemento = document.createElement('p');
+            // Crear un nuevo elemento de lista para las notas
+            const notasElemento = document.createElement('li');
             notasElemento.textContent = notas;
-            contenedorNotas.appendChild(notasElemento);
 
-            // Mostrar el contenedor de notas si no está visible
-            contenedorNotas.style.display = 'block';
+            // Crear una nueva sección para las notas y agregarlas al lado de la tarea
+            const notasSeccion = document.createElement('section');
+            notasSeccion.appendChild(notasElemento);
+            
+            // Agregar las nuevas notas a la lista de tareas en la sección de notas
+            const listaNotas = document.querySelector('.notas1 ul');
+            listaNotas.appendChild(notasElemento);
+
+            // Agregar la nueva sección de notas al lado de la tarea seleccionada
+            tareaSeleccionada.appendChild(notasSeccion);
 
             // Limpiar el input de notas después de agregarlas
             inputNotas.value = '';
@@ -31,6 +38,7 @@ export function agregarNotas() {
         alert('Por favor selecciona una tarea antes de agregar notas.');
     }
 }
+
 
 // Función para mostrar u ocultar el input de notas según si hay una tarea seleccionada
 function mostrarInputNotas() {
@@ -68,3 +76,4 @@ inputNotas.addEventListener('keypress', function(event) {
 
 // Ocultar el input de notas inicialmente
 inputNotas.style.display = 'none';
+

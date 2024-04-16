@@ -8,6 +8,24 @@ header {
     margin: 0;
     padding: 0;
 }
+
+.visual {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px;
+    width: 100%;
+    background-color:#e9712c ;
+}
+
+.lista {
+    width: 100%;
+}
+
+.notas1 {
+    width: 40%;
+}
+
 .container {
     display: flex;
     flex-direction: column;
