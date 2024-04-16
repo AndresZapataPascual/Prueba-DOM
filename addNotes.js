@@ -5,10 +5,7 @@ const listaTareas = document.getElementById('lista-tareas');
 
 // Función para agregar notas a una tarea seleccionada
 export function agregarNotas() {
-    // Obtener la tarea seleccionada
-    const tareaSeleccionada = listaTareas.querySelector('.seleccionada');
-
-    if (tareaSeleccionada) {
+   
         // Obtener las notas ingresadas por el usuario
         const notas = inputNotas.value.trim();
 
@@ -17,34 +14,19 @@ export function agregarNotas() {
             // Crear un nuevo elemento de lista para las notas
             const notasElemento = document.createElement('li');
             notasElemento.textContent = notas;
-
-            // Crear una nueva sección para las notas y agregarlas al lado de la tarea
-            const notasSeccion = document.createElement('section');
-            notasSeccion.appendChild(notasElemento);
             
             // Agregar las nuevas notas a la lista de tareas en la sección de notas
             const listaNotas = document.querySelector('.notas1 ul');
             listaNotas.appendChild(notasElemento);
-
-            // Agregar la nueva sección de notas al lado de la tarea seleccionada
-            tareaSeleccionada.appendChild(notasSeccion);
 
             // Limpiar el input de notas después de agregarlas
             inputNotas.value = '';
         } else {
             alert('Por favor ingresa notas válidas.');
         }
-    } else {
-        alert('Por favor selecciona una tarea antes de agregar notas.');
-    }
-}
+    } 
+    
 
-
-// Función para mostrar u ocultar el input de notas según si hay una tarea seleccionada
-function mostrarInputNotas() {
-    const tareaSeleccionada = listaTareas.querySelector('.seleccionada');
-    inputNotas.style.display = tareaSeleccionada ? 'block' : 'none';
-}
 
 // Escuchar eventos de click en la lista de tareas para seleccionar una tarea
 listaTareas.addEventListener('click', function(event) {
@@ -74,6 +56,4 @@ inputNotas.addEventListener('keypress', function(event) {
     }
 });
 
-// Ocultar el input de notas inicialmente
-inputNotas.style.display = 'none';
 
