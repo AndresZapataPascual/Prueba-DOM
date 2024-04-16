@@ -31,9 +31,18 @@ export function agregarTarea() {
 
         //Agregar Tarea a la lista
         ListaDeTareas.appendChild(tareaNueva);
+
+        // Limpiar el input de tarea después de agregarla
+        input.value = '';
     }
     else{
         alert('Por favor ingresa una tarea.');
+    }
+}
+
+function handleEnter(event) {
+    if (event.key === 'Enter') {
+        agregarTarea();
     }
 }
 
@@ -47,3 +56,4 @@ function eliminarTarea(e) {
     tarea.remove();
 }
 button.addEventListener('click', agregarTarea);
+input.addEventListener('keypress', handleEnter);

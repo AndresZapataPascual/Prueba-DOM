@@ -77,6 +77,11 @@ button:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
+    cursor: pointer;
+}
+
+.tarea:hover {
+    background-color: aqua;
 }
 
 .tarea.completada {
@@ -105,4 +110,17 @@ i {
 
 .icono-completar:hover , .icono-eliminar:hover {
     background-color: rgba(255,255,255,0.523);
+}
+
+.Apunte {
+    background-color:aquamarine;
+}
+
+.filtros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    justify-content: space-between;
 }

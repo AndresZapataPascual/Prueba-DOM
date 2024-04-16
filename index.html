@@ -21,25 +21,27 @@
 
             <section class="filtros">
                 <h2>Filtros</h2>
-                <label for="filtro-completadas">
-                    <input type="checkbox" id="filtro-completadas"> Mostrar completadas
-                </label>
-                <label for="filtro-no-completadas">
-                    <input type="checkbox" id="filtro-no-completadas"> Mostrar no completadas
-                </label>
+                <label for="filtro-completadas">Completadas</label>
+                <input type="radio" name="filtro-tareas" id="filtro-completadas" value="completadas">
+                <label for="filtro-no-completadas">No Completadas</label>
+                <input type="radio" name="filtro-tareas" id="filtro-no-completadas" value="no-completadas">              
+                <label for="filtro-todas">Mostrar Todas</label>
+                <input type="radio" name="filtro-tareas" id="filtro-todas" value="todas" checked>
             </section>
         </section>
-        
+
         <section class="lista">
             <h2>Lista de Tareas</h2>
             <ul id="lista-tareas">
                 <!-- Aquí se mostrarán las tareas -->
             </ul>
+            <div id="contenedor-notas" style="display: none;"></div>
         </section>
     </main>
 
     <section class="notas">
-        <input type="text" id="txt-nota">
+        <h2>Notas</h2>
+        <input type="text" id="ing-notas" placeholder="Ingrese notas para la tarea seleccionada">
     </section>
     <script type="module" src="app.js"></script>
 </body>
