@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>GESTOR DE TAREAS</h1>
+    </header>
+    <main class="container">
+        <section class="add">
+            <section class="añadir">
+                <h2>Agregar Tarea</h2>
+                <input type="text" id="ing-tarea" placeholder="Ingrese una nueva tarea">
+                <button id="add-tarea">Agregar Tarea</button>
+            </section>
+
+            <section class="filtros">
+                <h2>Filtros</h2>
+                <label for="filtro-completadas">
+                    <input type="checkbox" id="filtro-completadas"> Mostrar completadas
+                </label>
+                <label for="filtro-no-completadas">
+                    <input type="checkbox" id="filtro-no-completadas"> Mostrar no completadas
+                </label>
+            </section>
+        </section>
+        
+        <section class="lista">
+            <h2>Lista de Tareas</h2>
+            <ul id="lista-tareas">
+                <!-- Aquí se mostrarán las tareas -->
+            </ul>
+        </section>
+    </main>
+
+    <section class="notas">
+
+    </section>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
