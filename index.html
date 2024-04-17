@@ -8,54 +8,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>GESTOR DE TAREAS</h1>
-    </header>
-    <main class="container">
-        <section class="add">
-            <section class="division">
-                <section class="añadir">
-                    <h2>Agregar Tarea</h2>
-                    <input type="text" id="ing-tarea" placeholder="Ingrese una nueva tarea">
-                    <button id="add-tarea">Agregar Tarea</button>
-                </section>
-
-                <section class="notas">
-                    <h2>Notas</h2>
-                    <input type="text" id="ing-notas" placeholder="Ingrese notas sobre los pendientes">
-                </section>
-            </section>
-
-            <section class="filtros">
-                <h2>Filtros</h2>
-                <label for="filtro-completadas">Completadas</label>
-                <input type="radio" name="filtro-tareas" id="filtro-completadas" value="completadas">
-                <label for="filtro-no-completadas">No Completadas</label>
-                <input type="radio" name="filtro-tareas" id="filtro-no-completadas" value="no-completadas">              
-                <label for="filtro-todas">Mostrar Todas</label>
-                <input type="radio" name="filtro-tareas" id="filtro-todas" value="todas" checked>
-            </section>
-        </section>
-
-        <section class="visual">
-            <section class="lista">
-                <h2>Lista de Tareas</h2>
-                <ul id="lista-tareas">
-                    <!-- Aquí se mostrarán las tareas -->
-                </ul>
-                <div id="contenedor-notas" style="display: none;"></div>
-            </section>
-
-            <section class="notas1">
-                <h2>Notas</h2>
-                <ul>
-                    <!-- Aquí se agregarán dinámicamente las notas como elementos <li> -->
-                </ul>
-            </section>
-        </section>
-    </main>
-
-    
     <script type="module" src="app.js"></script>
 </body>
 </html>

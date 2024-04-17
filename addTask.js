@@ -1,15 +1,30 @@
-const input = document.getElementById('ing-tarea');
-const button = document.getElementById('add-tarea');
-const ListaDeTareas = document.getElementById('lista-tareas');
+// addTask.js
+
+export function inicializarTareas() {
+    const botonAgregarTarea = document.getElementById('add-tarea');
+    const inputTarea = document.getElementById('ing-tarea');
+
+    botonAgregarTarea.addEventListener('click', agregarTarea);
+    inputTarea.addEventListener('keypress', handleEnter);
+}
+
+function handleEnter(event) {
+    if (event.key === 'Enter') {
+        agregarTarea();
+    }
+}
 
 export function agregarTarea() {
+    const input = document.getElementById('ing-tarea');
+    const ListaDeTareas = document.getElementById('lista-tareas');
+
     if (input.value) {
         //crear tarea
         let tareaNueva = document.createElement('section');
         tareaNueva.classList.add('tarea');
 
         //Texto ingresado por el usuario
-        let texto =document.createElement('p');
+        let texto = document.createElement('p');
         texto.innerText = input.value;
         tareaNueva.appendChild(texto);
 
@@ -34,15 +49,8 @@ export function agregarTarea() {
 
         // Limpiar el input de tarea después de agregarla
         input.value = '';
-    }
-    else{
+    } else {
         alert('Por favor ingresa una tarea.');
-    }
-}
-
-function handleEnter(event) {
-    if (event.key === 'Enter') {
-        agregarTarea();
     }
 }
 
@@ -55,5 +63,4 @@ function eliminarTarea(e) {
     let tarea = e.target.parentNode.parentNode;
     tarea.remove();
 }
-button.addEventListener('click', agregarTarea);
-input.addEventListener('keypress', handleEnter);
+
